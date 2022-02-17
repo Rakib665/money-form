@@ -9,3 +9,6 @@ margin-top: 50px;
 .head-color{
     color: #DE3163 ;
 }
+.alert{
+    display: none;
+}

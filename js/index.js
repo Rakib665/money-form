@@ -11,6 +11,24 @@ function totalExpensesCalculate(){
     let totalSpent = foodValue + rentValue + clothId;
      return totalSpent ;
 }
+function afterExpensesBalance (){
+    var sallary = getInput('incomeId');
+    var spend = totalExpensesCalculate();
+    var balanceId = document.getElementById('balance');
+    var balance = sallary - spend;
+    balanceId.innerText = balance;
+    return balance
+}
+// saving money
+function savingMoney (){
+    var monthlySellary = getInput('incomeId');
+    var savingPercent = getInput('saveId');
+    var saveMoney = (monthlySellary / 100) * savingPercent;
+     var showSavingMoney = document.getElementById('saving-balance-id');
+     showSavingMoney.innerText = parseInt(saveMoney);
+     return showSavingMoney.innerText
+    //  let showSaveValue = showSavingMoney.innerText;
+}
 
 document.getElementById('calculate-btn').addEventListener('click', function(){
     // total-expences
@@ -19,27 +37,24 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     totalSpentId.innerText = totalExpensesCalculate();
 
 // for balance 
-    var sallary = getInput('incomeId');
-    var spend = totalExpensesCalculate();
-    var balanceId = document.getElementById('balance');
-    var balance = sallary - spend;
-    balanceId.innerText = balance;
+    // var sallary = getInput('incomeId');
+    // var spend = totalExpensesCalculate();
+    // var balanceId = document.getElementById('balance');
+    // var balance = sallary - spend;
+    // balanceId.innerText = balance;
+    afterExpensesBalance();
 
-   
 
-    
-    
 })
 
-    // saving section
 
 document.getElementById('save-btn').addEventListener('click', function(){ 
-    var monthlySellary = getInput('incomeId');
-    var savingPercent = getInput('saveId');
-    var saveMoney = (monthlySellary / 100) * savingPercent;
-     var showSavingMoney = document.getElementById('saving-balance-id');
-     showSavingMoney.innerText = parseInt(saveMoney);
+        // saving section
+   let saveMoney = savingMoney();
+   let afterExpenses = afterExpensesBalance();
 
-    
-    console.log(saveMoney);
+     // remaining balance
+     let remainingBalance =  afterExpenses - saveMoney ;
+     var remainingId = document.getElementById('remaining-balance-id');
+     remainingId.innerText = remainingBalance;
 })
