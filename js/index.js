@@ -29,7 +29,12 @@ function savingMoney (){
      return showSavingMoney.innerText
     //  let showSaveValue = showSavingMoney.innerText;
 }
-
+// for error section
+function errorHandle (){
+    let foodValue = getInput('foodId');
+    let rentValue = getInput('rentId');
+    let clothId = getInput('clothId');
+}
 document.getElementById('calculate-btn').addEventListener('click', function(){
     // total-expences
     var totalSpentId = document.getElementById('total-spent');
@@ -44,7 +49,21 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
     // balanceId.innerText = balance;
     afterExpensesBalance();
 
+// error handle 1
+let income = getInput('incomeId');
+if(income<0){
+    let alert = document.getElementById('for-negative-number');
+    alert.style.display = 'block';
+}
 
+// error handle -2
+let food = getInput('foodId');
+let rent = getInput('rentId')
+let cloth = getInput('clothId');
+if(isNaN(food, rent, cloth)){
+    let number = document.getElementById('for-number');
+    number.style.display = 'block';
+}
 })
 
 
