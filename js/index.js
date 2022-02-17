@@ -33,10 +33,13 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 
     // saving section
 
-document.getElementById('save-btn').addEventListener('click', function(){
-    var monthlySallary = getInput('incomeId')
-    var savingInput = getInput('saveId');
-    var savingPercent = document.getElementById('saving-balance-id');
-    var saving = parseFloat( monthlySallary) / parseFloat(savingInput) ;
-    savingPercent.innerText = saving;
+document.getElementById('save-btn').addEventListener('click', function(){ 
+    var monthlySellary = getInput('incomeId');
+    var savingPercent = getInput('saveId');
+    var saveMoney = (monthlySellary / 100) * savingPercent;
+     var showSavingMoney = document.getElementById('saving-balance-id');
+     showSavingMoney.innerText = parseInt(saveMoney);
+
+    
+    console.log(saveMoney);
 })
