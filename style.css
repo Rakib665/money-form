@@ -1,7 +1,11 @@
-.left-img img{
-    height: 815px ;
-    width: 715px;
+.main-section{
+    background-color: 	#EAECEE ;
+    padding:  20px;
+
 }
-.total-expences{
-    margin-left: 30px;
+.money-img img{
+margin-top: 50px;
+}
+.head-color{
+    color: #DE3163 ;
 }
