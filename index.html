@@ -17,41 +17,40 @@
         <h1 class=" text-center text-info">Monthly calculate Form</h1>
     </header>
     <main>
-        <section>
-            <div class="row g-2 justify-content-between">
-                <div class="col-lg-5 col-md-6">
-                  <!-- <div class="p-3 border bg-warning d-flex justify-content-between align-items-center rounded-3"> -->
-                    <img class=" m-2 img-fluid" src="./images/money-2.jpg" alt="">
-                  </div>
-                  <div class="col-lg-5 col-md-6">
-                    <h3 class=" "> Income</h3>
-                    <label for="incomeInput">Income:</label>
-                    <input  class="incomeInput mx-auto m-2" type="number" name="" id="incomeId">
-                    <br>
-                    <h3 class="">Expenses</h3>
-                    <label for="foodInput">Food:</label>
-                    <input class="foodInput mx-auto m-2" type="number" name="" id="foodId">
-                    <br>
-                    <label for="rentInput">Rent:</label>
-                    <input class="rentInput mx-auto m-2" type="number" name="" id="rentId">
-                    <br>
-                    <label for="clothInput">Clothes:</label>
-                    <input class="clothInput mx-auto m-2" type="number" name="" id="clothId">
-                    <br>
-                    <button id="calculate-btn" class="bg-warning text-white">Calculate</button>
-                    <p class=" mt-2 totalExpences">Total Expenses:$<span id="total-spent">00</span></p>
-                    <p>Balance:$<span id="balance">00</span></p>
-                    <!-- saving section -->
-                    <label for="clothInput">Save:</label>
-                    <input class=" mx-auto m-2" type="number" name="" id="saveId">
-                    <button id="save-btn" class="bg-light">Save</button>
-                    <p class=" mt-2 ">saving input:$<span id="saving-balance-id">00</span></p>
-                    <p>Remaining Balance:$<span id="remaining-balance-id">00</span></p>
-                    </div>
-                </div>
-              </div>
-        </section>
        
+       <section>
+           <div class="row container mx-auto">
+               <div class="col-lg-6 col-12 w-50">
+                <img class=" " src="./images/coin.jpg" alt="">
+               </div>
+               <div class="col-lg-6 col-12">
+                <h3 class=" "> Income</h3>
+                <label for="incomeInput">Income:</label>
+                <input  class="incomeInput mx-auto m-2" type="number" name="" id="incomeId">
+                <br>
+                <h3 class="">Expenses</h3>
+                <label for="foodInput">Food:</label>
+                <input class="foodInput mx-auto m-2" type="number" name="" id="foodId">
+                <br>
+                <label for="rentInput">Rent:</label>
+                <input class="rentInput mx-auto m-2" type="number" name="" id="rentId">
+                <br>
+                <label for="clothInput">Clothes:</label>
+                <input class="clothInput mx-auto m-2" type="number" name="" id="clothId">
+                <br>
+                <button id="calculate-btn" class="bg-warning text-white">Calculate</button>
+                <p class=" mt-2 totalExpences">Total Expenses:$<span id="total-spent">00</span></p>
+                <p>Balance:$<span id="balance">00</span></p>
+                <!-- saving section -->
+                <label for="clothInput">Save:</label>
+                <input class=" mx-auto m-2" type="number" name="" id="saveId">
+                <button id="save-btn" class="bg-light">Save</button>
+                <p class=" mt-2 ">saving input:$<span id="saving-balance-id">00</span></p>
+                <p>Remaining Balance:$<span id="remaining-balance-id">00</span></p>
+               </div>
+           </div>
+       </section>
+
     </main>
     <script src="js/index.js"></script>
 </body>
